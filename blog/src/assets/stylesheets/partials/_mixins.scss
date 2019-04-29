@@ -1,0 +1,15 @@
+@mixin round-borders($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin round-borders-all($rt, $rr, $rb, $rl ){
+  border-radius: $rt $rr $rb $rl;
+  -moz-border-radius: $rt $rr $rb $rl;
+  -webkit-border-radius: $rt $rr $rb $rl;
+}
+
+@mixin set-padding($top, $right, $bottom, $left){
+  padding: $top $right $bottom $left !important;
+}

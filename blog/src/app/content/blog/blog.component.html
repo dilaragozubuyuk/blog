@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="row title">
+    <div class="col my-auto header d-flex justify-content-center">
+      <h1>BLOG</h1>
+    </div>
+  </div>
+  <div class="row header-date">
+    <div class="col computer-only">
+      <div class="row months h-100">
+        <div class="col my-auto d-flex justify-content-center cursor-pointer "
+          *ngFor="let month of headerMonths; let index = index">
+          <span (click)="changeMonthSort(month)">{{months[month]}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col mobile-only">
+      <div class="row h-100">
+        <div class="col my-auto d-flex justify-content-center cursor-pointer">
+          <div class="form-group">
+            <select class="form-control" id="months" [(ngModel)]="selectedMonth" name="months">
+              <option *ngFor="let month of headerMonths; let index = index" [value]="months[month]"
+                (click)="changeMonthSort(month)">{{months[month]}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex years justify-content-start">
+      <div class="row h-100">
+        <div class="col my-auto" [ngClass]="{'active': year === selectedYear, 'computer-only': year !== selectedYear}" *ngFor="let year of yearList">
+          {{year}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row timeline-content">
+    <ul class="timeline">
+      <li *ngFor="let blog of list; let index = index" [ngClass]="{'timeline-inverted': index % 2 !== 0}">
+        <div class="timeline-badge">
+          {{getDay(blog.date)}}
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-body">
+            <div class="row" *ngIf="index % 2 === 0">
+              <div class="col computer-only">
+                <img src="{{blog.photoUrl}}" alt="{{blog.title}}">
+              </div>
+              <div class="col context-right">
+                <div class="row blog-body">
+                  <div class="col">
+                    <p><b>{{blog.title}}</b></p>
+                    <p>{{blog.context}}</p>
+                  </div>
+                </div>
+                <div class="row more-info-row">
+                  <span class="more-info computer-only">Read More</span>
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="index % 2 !== 0">
+              <div class="col context-left">
+                <div class="row blog-body">
+                  <div class="col">
+                    <p><b>{{blog.title}}</b></p>
+                    <p>{{blog.context}}</p>
+                  </div>
+                </div>
+                <div class="row more-info-row">
+                  <span class="more-info computer-only">Read More</span>
+                </div>
+              </div>
+              <div class="col d-flex computer-only justify-content-end">
+                <img src="{{blog.photoUrl}}" alt="{{blog.title}}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

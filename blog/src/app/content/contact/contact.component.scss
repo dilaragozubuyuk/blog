@@ -1,0 +1,40 @@
+.header {
+    color: white;
+    padding-top: 55px;
+    h1 {
+        font-weight: 100;
+    }
+}
+
+.map {
+    padding-bottom: 60px;
+    img {
+        height: 230px;
+    }
+}
+
+.form-content {
+    .send-button {
+        color: red;
+        text-align: right;
+    }
+    p:nth-child(1) {
+        color: gray;
+    }
+    p:nth-child(2) {
+        color: white;
+    }
+    textarea {
+        border: none;
+        background-image: linear-gradient(to right, #393e42 10px, transparent 10px), linear-gradient(to left, #393e42 10px, transparent 10px), repeating-linear-gradient(#393e42, #393e42 30px, #ccc 30px, #ccc 31px, #393e42 31px);
+        background-image: -moz-linear-gradient(left, #393e42 10px, transparent 10px), -moz-linear-gradient(right, #393e42 10px, transparent 10px), -moz-linear-gradient(#393e42 30px, white 30px, white 31px, #393e42 31px);
+        background-image: -ms-linear-gradient(left, #393e42 10px, transparent 10px), -ms-linear-gradient(right, #393e42 10px, transparent 10px), -ms-linear-gradient(#393e42 30px, white 30px, white 31px, #393e42 31px);
+        background-image: -o-linear-gradient(left, #393e42 10px, transparent 10px), -o-linear-gradient(right, #393e42 10px, transparent 10px), -o-linear-gradient(#393e42 30px, white 30px, white 31px, #393e42 31px);
+        background-size: 100% 100%, 100% 100%, 100% 31px;
+        border-radius: 8px;
+        color: white;
+        &:focus {
+            outline: none;
+        }
+    }
+}

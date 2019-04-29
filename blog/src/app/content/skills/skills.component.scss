@@ -1,0 +1,43 @@
+.header {
+    color: white;
+    padding-top: 30px;
+    h1 {
+        font-weight: 100;
+    }
+}
+.skill-list {
+    padding: 90px 90px 60px 90px;
+    color: white;
+
+    .col {
+        padding: 10px;
+    }
+
+    img {
+        height: 150px;
+    }
+
+    .skill-head {
+        padding-top: 30px;
+    }
+
+    .skill-text {
+        font-weight: 100;
+    }
+}
+
+.quick-works {
+    color: #abab93;
+    font-weight: 700;
+    padding: 0px 30px 60px;
+    span {
+        padding-right: 7px;
+    }
+    a {
+        color: white;
+        border-bottom: 1px solid white;
+        &:hover {
+            text-decoration: unset;
+        }
+    }
+}
